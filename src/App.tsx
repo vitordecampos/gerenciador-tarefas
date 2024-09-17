@@ -7,7 +7,7 @@ import { AddArea } from './components/AddArea';
 const App = () => {
   const [list, setList] = useState<Item[]>([
     { id: 1, name: 'Reuniao as 9h', done: false },
-    { id: 2, name: 'Consulta Médica', done: true },
+    { id: 2, name: 'Consulta Médica', done: false },
   ]);
 
   const handleAddTask = (taskName: string) => {
@@ -20,7 +20,6 @@ const App = () => {
     setList(newList);
   }
 
-  // Função feita para tarefinha de casa.
   const handleTaskChange = (id: number, done: boolean) => {
     let newList = [...list];
     for(let i in newList) {
